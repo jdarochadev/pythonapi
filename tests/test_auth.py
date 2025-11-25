@@ -69,3 +69,4 @@ def test_refresh_token_invalid(client):
     response = client.post("/auth/refresh", json=refresh_data)
     assert response.status_code == 401
     assert "Invalid refresh token" in response.json()["detail"]
+
